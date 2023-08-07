@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countries</title>
+</head>
+<body>
+Страны
+<ol>
+        {% for country in country %}
+
+         <li><a href="/country/{{country}}">{{country.country}}</a></li>
+
+
+
+        {% endfor %}
+</body>
+</ol>
+</html>

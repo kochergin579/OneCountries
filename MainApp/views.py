@@ -1,6 +1,27 @@
 from django.shortcuts import render, HttpResponse
+import json
+
 
 def home(request):
-    return HttpResponse('<h1>Hello</h1>')
+    return render(request, 'index.html')
 
-# Create your views here.
+
+def countries_list(request):
+    with open('countries.json') as f:
+        country = json.load(f)
+
+        context = {
+            "country": country
+
+        }
+    return render(request, "countries_list.html", context)
+
+
+def languages_list(request):
+    with open('countries.json') as f:
+        country = json.load(f)
+
+        context = {
+            "country": country
+        }
+    return render(request, "languages_list.html", context)

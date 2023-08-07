@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Languages</title>
+</head>
+<body>
+Языки
+<ol>
+    {% for languages in country %}
+        {% for language in languages.languages %}
+
+
+    <li> {{language }} </li>
+
+    {% endfor %}
+        {% endfor %}
+
+</ol>
+
+</body>
+</html>
