@@ -11,12 +11,19 @@
         {% for language in languages.languages %}
 
 
-    <li> {{language }} </li>
+    <li> <a href="/language/{{language}}">{{ language }}</a> </li>
+
+
+
+            {% endfor %}
 
     {% endfor %}
-        {% endfor %}
+
+
+
 
 </ol>
 
 </body>
+
 </html>
