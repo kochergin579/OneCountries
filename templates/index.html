@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello</title>
-</head>
-<body>
-    <h1>Привет</h1>
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Приветствую</h1>
+
+
 <a href="/countries/"> countries<br></a>
 <a href="/languages/"> languages</a>
-
-
-</body>
-</html>
+{% endblock %}
