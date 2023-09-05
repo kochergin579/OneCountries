@@ -3,6 +3,8 @@ import json
 from MainApp.models import Country
 from MainApp.models import Language
 from django.shortcuts import render
+from django.http import HttpResponseNotFound
+from django.core.exceptions import ObjectDoesNotExist
 
 def home(request):
     return render(request, 'index.html')
@@ -32,16 +34,16 @@ def languages_list(request):
     return render(request, "languages_list.html", context)
 
 def country_page(request, id):
-    try:
+     try:
         country = Country.objects.get(id=id)
         language = Country.Language.all()
-    except ObjectDoesNotExist:
+     except ObjectDoesNotExist:
         return HttpResponseNotFound(f"Товар с id {id} не найден")
-    context = {
-        "country": country,
-        "language": language
-    }
-    return render(request, "country_page.html", context)
+        context = {
+            "country": country,
+            "language": language
+        }
+        return render(request, "country_page.html", context)
 
 
 
