@@ -7,15 +7,11 @@
 <body>
 Языки
 <ol>
-    {% for languages in country %}
-        {% for language in languages.languages %}
+    {% for language in language %}
 
-    <li> <a href="/language/{{language}}">{{ language }}</a> </li>
-
-            {% endfor %}
+         <li> <a href="/language/{{language}}">{{ language.name}}</a> </li>
 
     {% endfor %}
-
 </ol>
 </body>
 </html>
