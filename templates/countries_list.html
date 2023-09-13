@@ -5,11 +5,11 @@
     <title>Countries</title>
 </head>
 <body>
-Страны
+<h1>Country</h1>
 <ol>
         {% for country in country %}
 
-             <li><a href="/country/{{country}}">{{country.name}}</a></li>
+             <li><a href="/country/{{ country.id }}">{{ country.name }}</a></li>
 
         {% endfor %}
 

@@ -36,12 +36,12 @@ def languages_list(request):
 
 def country_page(request, id):
      # try:
-    country = Country.objects.get(id=id)
-        # language = Country.Language.all()
+     country = Country.objects.get(id=id)
+     # language = Country.Language.all()
      # except ObjectDoesNotExist:
-     #    return HttpResponseNotFound(f"Товар с id {id} не найден")
-    context = {
-        "country": country
-            # "language": language
-    }
-    return render(request, "country_page.html", context)
+     #        return HttpResponseNotFound(f"Товар с id {id} не найден")
+     context = {
+        "country": country,
+        # "language": language
+     }
+     return render(request, "country_page.html", context)
