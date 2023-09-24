@@ -4,10 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>country.name</title>
+
+<a href="/countries/">countries</a><br>
+<a href="/languages/"> languages</a>
 </head>
 <body>
+
+
     <h2>{{ country.name }}</h2>
+
+Язык:
+    {%for language in languages %}
+      <ul>
+
+
+         <li><a href="/language/{{language}}">{{ language.name }} </a></li>
+
+
+
+      </ul>
+    {% endfor %}
 </body>
-<a href="/countries/">Назад</a>
-<a href="/languages/"> languages</a>
+
 </html>
