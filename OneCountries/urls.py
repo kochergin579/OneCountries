@@ -20,9 +20,10 @@ from MainApp import views
 from django.conf import settings
 
 urlpatterns = [
-    path('',views.home ,name="home"),
+    path('',views.home, name="home"),
     path('countries/', views.countries_list, name="countries_list"),
     path('languages/', views.languages_list, name="languages_list"),
     path('country/<int:id>/', views.country_page, name="country_page"),
+
 
 ]

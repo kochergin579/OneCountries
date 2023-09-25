@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+
+    {% extends 'base.html' %}
+<a href="{% url 'home' %}"> Home</a><br>
+
+
+
     <title>Countries</title>
-</head>
+{% block content %}
+<a href="{% url 'home' %}"> Home</a><br>
+<a href="/languages/"> languages</a>
 <body>
 <h1>Country</h1>
 <ol>
@@ -14,6 +18,4 @@
         {% endfor %}
 
  </ol>
-</body>
-
-</html>
+{% endblock %}
